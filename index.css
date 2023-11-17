@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'poppins' , 'sans-serif';
+
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:  rgb(159, 79, 159);
+
+}
+
+main{
+ position: relative;
+ width:99vw;
+ min-height:97vh;
+ background-color:white;
+ backdrop-filter: blur(200px);
+ filter: blur();
+ box-shadow: 0 , 3rem , 5rem , black;
+ border-radius: 9px;
+ overflow: hidden;
+ display: flex;
+}
+
+
+.player{
+  flex:50%;
+  padding:10px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  transition: all 0.75s;
+  border-radius: 11px;
+  background-color: #ffe6ff;
+
+}
+
+.name{
+position: relative;
+font-size: 4rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+word-spacing: 2px;
+font-weight: 500;
+margin-bottom: 3rem;
+margin-top: 1rem;
+color:purple;
+
+}
+
+.inputs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputs input {
+  height:57px;
+  width:56px;
+  margin:4px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: none;
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+  color:purple;
+  text-transform: uppercase;
+}
+
+.content .typing-input1{
+/* hiding the typing input tag but its functioning in the background*/
+  z-index: -999;
+  opacity : 0;
+  position: absolute;
+}
+
+.content .typing-input2{
+  /* hiding the typing input tag but its functioning in the background*/
+    z-index: -999;
+    opacity : 0;
+    position: absolute;
+  }
+
+.details{
+  margin: 20px 0px 25px;
+}
+
+.details p{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.player-active{
+  background-color:white;
+
+}
+
+
+.player-active .name{
+  font-weight: 600;
+  background-color:  #ffe6ff;
+  padding:5px ;
+  box-shadow:0 1rem 2rem rgb(180, 180, 180);
+  border-radius: 9px;
+  color:purple;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate
+}
+
+
+@keyframes example {
+  0%   {background-color:#ffddff}
+  25%  {background-color:lemonchiffon}
+  50%  {background-color:#ffddff}
+  100% {background-color: lemonchiffon}
+}
+
+.btn{
+  position: absolute;
+  top:70vh;
+  left:50%;
+  transform: translateX(-50%);
+  color:purple;
+  background: none;
+  border:none;
+  font-size : 1.8rem;
+  text-transform: uppercase;
+  cursor:pointer;
+  font-weight: 500;
+  transition : all 0.2s;
+  background-color: #ffe6ff;
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0  1.75rem 3.5rem rgb(195, 195, 195);
+
+
+}
+
+.btn:hover {
+  background-color: purple;
+  color: #ffe6ff;
+  
+}
+
+.btn:active {
+  background-color: purple;
+  box-shadow: 0 1px rgb(255, 255, 255);
+  transform: translateX(-48%);
+}
+
+#btn_roll{
+  top:65vh;
+}
+
+#btn_reset{
+  top:77vh;
+}
+
+.dice{
+  position: absolute;
+  left:50%;
+  top:30vh;
+  transform:translateX(-50%);
+  box-shadow: 0 1rem 2rem rgb(150, 150, 150);
+  border-radius: 6px;
+}
+

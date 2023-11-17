@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Word by Rolling the Dice</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!--Main box starts-->
+  <main>
+
+    <!--Player 1 box starts-->
+    <div class="player player-active" id="player1_container">
+      <h1 class="name" id="player1">player 1</h1>
+      <div class = content><input type="text" class="typing-input1" maxlength="1">  </div>
+      <div class="inputs" id="inputs1">
+
+      </div>
+      <div class="details" id="detailsP1">
+        <p class="hintP1">Hint : <span></span></p>
+        <p class="wrongLettersP1" id="wrongLetters1">Wrong Letters : <span></span></p>
+      </div>
+    </div>
+    <!--player 1 box ended-->
+
+
+    <!--Player 2 box starts-->
+    <div class="player" id="player2_container">
+      <h1 class="name"id="player2">player 2</h1>
+
+      <div class = content ><input type="text" class="typing-input2" maxlength="1">  </div>
+      <div class="inputs" id="inputs2">
+
+      </div>
+      <div class="details" id="detailsP2">
+        <p class="hintP2">Hint : <span></span></p>
+        <p class="wrongLettersP2" id="wrongLetters2">Wrong Letters : <span></span></p>
+      </div>
+    </div>
+    <!--player 2 box ended-->
+  
+
+
+    <!--dice and buttons starts-->
+    <img src="./mainDice.png" alt="playing dice" class="dice" width="200em" height="200em">
+    <button class="btn" id="btn_roll">Roll the Dice</button>
+    <button class="btn" id="btn_reset">Reset Game</button>
+    <!--dice and button ended-->
+
+  </main>
+  <!--Main box ended-->
+
+  <script src="words.js"></script>
+  <script src="index.js"></script>
+  
+
+</body>
+</html>
