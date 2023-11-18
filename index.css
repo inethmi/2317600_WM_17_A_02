@@ -22,7 +22,7 @@ main{
  position: relative;
  width:99vw;
  min-height:97vh;
- background-color:#ffddff
+ background-color:#ffddff;
  backdrop-filter: blur(200px);
  filter: blur();
  box-shadow: 0 , 3rem , 5rem , black;
