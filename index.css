@@ -14,6 +14,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   background-color:  rgb(159, 79, 159);
+  background-image: linear-gradient(120deg, purple, pink);
 
 }
 
@@ -21,13 +22,14 @@ main{
  position: relative;
  width:99vw;
  min-height:97vh;
- background-color:white;
+ background-color:#ffddff
  backdrop-filter: blur(200px);
  filter: blur();
  box-shadow: 0 , 3rem , 5rem , black;
  border-radius: 9px;
  overflow: hidden;
  display: flex;
+
 }
 
 
@@ -40,6 +42,7 @@ main{
   transition: all 0.75s;
   border-radius: 11px;
   background-color: #ffe6ff;
+  
 
 }
 
@@ -102,6 +105,9 @@ color:purple;
 
 .player-active{
   background-color:white;
+  background-image: linear-gradient(120deg, white,white);
+  opacity: default;
+
 
 }
 

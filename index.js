@@ -89,15 +89,6 @@ function RollDice(){
         //automatically focusing input when user press any key
         document.addEventListener("keydown" , () => typingInputs1.focus());
         
-        for (let i = 0; i < randWord1.length; i++) {
-          
-          if(guessedLetters_1===randWord1){
-            alert('player 1 wins')
-          
-          }
-          
-        }
-        
   
       }else if (currentPlayer == 2){
   
@@ -111,16 +102,10 @@ function RollDice(){
         typingInputs.addEventListener("input" , handleInputs);
         //automatically focusing input when user press any key
         document.addEventListener("keydown" , () => typingInputs2.focus());
-        if(guessedLetters_2===randWord2){
-          alert('player 2 wins')
-          
-        }
+
         
       }
       
-     // currentPlayer = currentPlayer === 1 ? 2 : 1;
-      //container_1.classList.toggle("player-active");
-     // container_2.classList.toggle("player-active");
 
     }else{
 
@@ -144,7 +129,7 @@ function RollDice(){
      function handleInputs(e){
       let key = e.target.value.toLowerCase();
       // validate data :  entered key alphabetical not numeric
-      if(key.match(/^[A-Za-z]+$/) && !wrongLetters.includes(key)){
+      if(key.match(/^[A-Za-z]+$/) && !wrongLetters.includes(key) && !guessedLetters.includes(key)){
         console.log(key);
         if(word.includes(key)){
           //if the entered letter found in the random word
@@ -154,6 +139,13 @@ function RollDice(){
             if(word[i] === key){
               inputs.querySelectorAll("input")[i].value = key;
               guessedLetters.push(key);
+              setTimeout(() => {
+                if(guessedLetters.length===word.length){
+                alert('player' + currentPlayer + 'wins')
+                
+              }
+            }, 700);
+            
               currentPlayer = currentPlayer === 1 ? 2 : 1;
               container_1.classList.toggle("player-active");
               container_2.classList.toggle("player-active");
@@ -178,6 +170,7 @@ function RollDice(){
       wrong_letters.innerText = wrongLetters;
       //lets empty typing input box again
       typingInputs.value = "";
+
 
     }
 
