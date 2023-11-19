@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'poppins' , 'sans-serif';
+
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:  rgb(221, 159, 221);
+  background-image: linear-gradient(120deg, purple,rgb(255, 157, 250), pink ,rgb(255, 239, 242),rgb(255, 231, 235));
+
+}
+
+.container{
+    position: relative;
+    width:70vw;
+    min-height:77vh;
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 , 3rem , 5rem , black;
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+   
+   
+}
+
+.main{
+  position: relative;
+  width:50vw;
+  min-height:42vh;
+  background-color:#ffddff;
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 , 3rem , 5rem , black;
+  border-radius: 9px;
+  overflow: hidden;
+  bottom:17vh;
+  padding:50px;
+ }
+
+
+ 
+ .unicorn_1{
+  position: relative;
+  z-index: 1;
+  
+
+ }
+
+ .btn{
+  position: relative;
+  bottom: 70px;
+  color:#ffe6ff;
+  background: none;
+  border:none;
+  font-size : 1.8rem;
+  text-transform: uppercase;
+  cursor:pointer;
+  font-weight: 500;
+  transition : all 0.2s;
+  background-color: purple;
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0  1.75rem 3.5rem rgb(255, 181, 207);
+ }
+
+ .heading{
+  position: absolute;
+  left: 18vw;
+  top: 9vh;
+  color: purple;
+ }
+
+ .instruction{
+  position: absolute;
+  left:1vw;
+  top:16vh;
+  margin : 20px;
+  display: flex;
+  font-weight: 600;
+ 
+ }
+
+ .btn a{
+  color:#ffe6ff;
+  text-decoration: none;
+ }
+
+ .btn a:hover{
+  color: purple;
+
+ }
+
+ .btn a:active{
+  color: purple;
+ }
+
+ .btn:hover {
+  color: purple;
+  background-color: #ffe6ff;
+  
+}
+
+.btn:active {
+  background-color: #ffe6ff;
+  box-shadow: 0 1px rgb(255, 255, 255);
+  transform: translateX(-1%);
+  color: purple;
+}

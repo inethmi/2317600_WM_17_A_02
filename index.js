@@ -116,14 +116,14 @@ function RollDice(){
 
     }else{
 
-      //if it is not 1,5 or 6, delay the player switchingfor 0.7s
+      //if it is not 1,5 or 6, delay the player switchingfor 1.1s
       setTimeout(() => {
         diceRolling.setAttribute("src" ,"mainDice.png" );
         currentPlayer = currentPlayer === 1 ? 2 : 1;
         container_1.classList.toggle("player-active");
         container_2.classList.toggle("player-active");
 
-      },700);
+      },1100);
 
     }
 
@@ -161,7 +161,7 @@ function RollDice(){
             }, 700);
             
             //switching players
-              diceRolling.setAttribute("src" ,"mainDice.png" );
+              diceRolling.setAttribute("src" ,"mainDice.png" ); //before switching players the dice is changing to its normal.
               currentPlayer = currentPlayer === 1 ? 2 : 1;
               container_1.classList.toggle("player-active");
               container_2.classList.toggle("player-active"); 
@@ -184,6 +184,8 @@ function RollDice(){
         }
 
       }else{
+        //if user enters a letter which is guessed before or enetrs a numeric value
+
         if(wrongLetters.includes(key)){
           alert("you have guessed that letter before and its wrong. Input another Letter");
         }
